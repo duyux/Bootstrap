@@ -1,0 +1,6 @@
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\bin\HelloStrap.dll.config
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\bin\HelloStrap.dll
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\bin\HelloStrap.pdb
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\obj\Debug\HelloStrap.dll
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\obj\Debug\HelloStrap.pdb
+E:\学习\src\Bootstrap学习\HelloStrap\HelloStrap\obj\Debug\HelloStrap.csprojResolveAssemblyReference.cache

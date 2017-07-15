@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>web worker</title>
+    <script>
+        //创建执行计算的线程
+        var worker = new Worker("SumCalculate.js");
+        //接收从线程中传出的计算结果
+        worker.onmessage = function (event) {
+            //消息文本放置在data属性中，可以实任何Javascript对象
+            alert("合计值为" + event.data + ".");
+        }
+        function calculate() {
+            //var num = parseInt(document.getElementById("num").value,10);
+            //var result = 0;
+
+            ////循环计算求和
+            //for (var i = 0; i <= num; i++){
+            //    result += i;
+            //}
+            //alert("合计值为"+result+".");
+
+            var num = parseInt(document.getElementById("num").value, 10);
+
+            //将数值传给线程
+            worker.postMessage(num);
+
+           
+        }
+    </script>
+
+</head>
+<body>
+    <h1>从1到给定数值的求和示例</h1>
+    输入数值：<input type="text" id="num" />
+    <button onclick="calculate()">计算</button>
+</body>
+</html>

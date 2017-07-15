@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>Geolocation api</title>
+    <script>
+        function showLOLA() {
+            var geo = window.navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    var coords = position.coords;
+                    alert(coords.latitude + "  " + coords.longitude);
+                },
+                //捕获错误信息
+                function (error) {
+                    var errorType = {
+                        1: '位置服务被拒绝',
+                        2: '获取不到位置信息',
+                        3: '获取信息超时'
+                    };
+                    alert(errorType[error.code]+"：不能确定你的当前位置");
+
+
+                }
+            );
+        }
+    </script>
+
+</head>
+<body>
+  
+    <button onclick="showLOLA()">计算</button>
+</body>
+</html>
